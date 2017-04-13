@@ -1,0 +1,96 @@
+/* =================================
+  Flexbox
+==================================== */
+
+.container {
+  display: flex;
+  /*Options are row, row reverse, column, column reverse*/
+  flex-direction: row;
+  /*Let flex items move to new lines when space runs out. nowrap, wrap and wrap reverse.*/
+  flex-wrap: wrap;
+  /*Changes how and where content lines up initially*/
+  justify-content: flex-start;
+  /*Align items aligns elements on the cross axis (Y axis). Default is stretch (fills height) */
+  align-items: stretch;
+
+  height: 450px
+
+}
+
+.item {
+  flex: 1;
+}
+
+
+/*Centering Demo*/
+.centering-demo {
+  display: flex;
+  min-height: 100vh;
+
+  /*justify-content: center;
+  align-items: center;*/
+}
+
+/*also valid*/
+.center-me {
+  /*align-self: center;*/
+  margin: auto;
+}
+
+
+
+
+
+
+
+
+
+/*Demo CSS*/
+
+/*This has the effect of making item 1 align left and the others right*/
+/*Good way to do logo left, nav links right*/
+/*.item-1 {
+  margin-right: auto;
+}*/
+
+
+/*Order value of all flex items defaults to 0. To put something before them, use negative numbers, ahead of them, positive. The usefulness of this really comes with media queries*/
+/*.item-1 {
+  order: 1;
+}
+
+.item-2 {
+  order: 2;
+}
+
+.item-6 {
+  order: -1;
+}*/
+
+/*Flex grow controls whether or not flex items expand to fill available space. Starts at 0*/
+/*.item {
+  flex-grow: 1;
+}*/
+
+/*Higher the number the more space an item will take up relative to it's siblings*/
+/*Works in multiples*/
+/*.item-3 {
+  flex-grow: 2;
+}*/
+
+/*Flex Basis lets us define initial size of items*/
+/*.item {
+  flex-grow: 1;
+  flex-basis: 200px;
+}*/
+
+/*Flex Shorthand property includes in order: flex-grow, flex-basis, flex-shrink*/
+/*Note that not giving second option will set it to 0. Could overwrite other CSS rule*/
+/*.item {
+  flex: 1 200px;
+}*/
+
+/*Align Self works like align items but is for specific flex items*/
+/*.item-1 {
+  align-self: flex-start;
+}*/

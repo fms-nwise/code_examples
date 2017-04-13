@@ -1,0 +1,292 @@
+/* =================================
+  Base Styles
+==================================== */
+
+body {
+	font-family: 'Varela Round', sans-serif;
+	line-height: 1.6;
+	color: #3a3a3a;
+}
+
+p {
+	font-size: .95em;
+	margin-bottom: 1.5em;
+}
+
+h2,
+h3,
+a {
+	color: #093a58;
+}
+
+h2,
+h3 {
+	margin-top: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+figure {
+	margin: 0;
+	line-height: 0;
+	position: relative;
+}
+
+figcaption {
+	font-size: .75em;
+	line-height: 1.5;
+	color: #fff;
+	padding: 1em;
+	background: rgba(19,43,102, .85);
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.caption-body-text {
+	display:none;
+}
+
+
+/*Apply clearfix class to parent of problem float elements to fix them*/
+	.clearfix::after {
+		content: "";
+		display: table;
+		clear:both;
+	}
+
+
+/* =================================
+  Base Layout Styles
+==================================== */
+/* ---- Navigation ---- */
+
+.name {
+	font-size: 1.25em;
+	margin: 0;
+}
+
+.main-nav {
+	margin-top: 5px;
+}
+
+.name a,
+.main-nav a {
+	text-align: center;
+	display: block;
+	padding: 10px 15px;
+}
+
+.main-nav a {
+	font-size: .95em;
+	color: #3acec2;
+	text-transform: uppercase;
+}
+
+.main-nav a:hover {
+	color: #093a58;
+}
+
+/* ---- Layout Containers ---- */
+
+.main-header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+
+.banner,
+.main-footer {
+	text-align: center;
+}
+
+.banner {
+	color: #fff;
+	background: #3acec2;
+	padding: 3.2em 0;
+	margin-bottom: 60px;
+}
+
+.col {
+	padding-right: 1em;
+	padding-left: 1em;
+}
+
+.main-footer {
+	padding: 2em 0;
+	background: #d9e4ea;
+}
+
+/* ---- Page Elements ---- */
+
+.logo {
+	width: 190px;
+}
+
+.headline {
+	margin-bottom: 0;
+}
+
+.icon-location {
+	width: 35px;
+	position: absolute;
+	top: -15px;
+	left: -15px;
+}
+/* =================================
+  Media Queries
+==================================== */
+
+@media (min-width: 450px) {
+	.caption-body-text {
+		display: block;
+	}
+
+	figcaption {
+		font-size: .9em;
+	}
+}
+
+@media (min-width: 769px) {
+
+	.wrap {
+		margin-top: 68px;
+		min-height: calc(100vh - 89px); /*100% viewport height - height of footer*/
+	}
+
+	.main-header {
+		position: fixed;
+		background: #fff;
+		box-shadow: 0 1px 4px rgba(0,0,0,.4);
+		width: 100%;
+		top: 0;
+		z-index: 1000;
+	}
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.name,
+	.col {
+		float: left;
+	}
+
+	.primary,
+	.secondary {
+		width: 50%;
+	}
+
+	.main-nav {
+		float: right;
+	}
+
+	.main-nav li {
+		display: inline-block;
+		margin-left: 15px;
+	}
+
+	.tagline {
+		font-size: 1.4em;
+	}
+
+	/*.feat-img {
+		width: 300px;
+		float:left;
+		margin: 5px 25px 25px 0;
+		padding: 10px;
+		border: solid 1px #d9e4ea;
+	}*/
+
+	/*Float Solutions Below*/
+
+	/*.main-nav {
+		float:right;
+	}
+
+	.main-nav li {
+		float:left;
+		margin: 20px 10px 0px 0px;
+	}
+
+	.main-header {
+		padding: 15px 25px;
+	}
+
+	.name {
+		padding-left: 10px;
+		float:left;
+	}
+
+	.col {
+		float:left;
+		vertical-align: top;
+		margin: 20px auto 0 auto;
+	}
+
+	.primary {
+		width: 40%;
+		padding: 0 15px;
+	}
+
+	.secondary {
+		width: 30%;
+		padding-left: 25px;
+	}
+
+	.tertiary {
+		width: 30%;
+		padding-right: 25px;
+	}
+
+	/*Display Inline-Block Solutions Below*/
+	/*.name,
+	.main-nav,
+	.main-nav li {
+		display:inline-block;
+	}*/
+
+
+	/*.name {
+		margin-right: 50px;
+		width: 240px;
+	}*/
+
+	/*To get rid of default whitespace between list items*/
+	/*.main-nav li {
+		margin-right: -5px;
+	}*/
+
+
+	/*.col {
+		display:inline-block;
+		width: 50%;
+		margin-left: -4px;
+		vertical-align: top;
+		padding: 0 1em;
+	}*/
+
+} /*@media769*/
+
+@media (min-width: 1025px) {
+
+	.container {
+		width: 80%;
+		max-width: 1150px;
+	}
+
+	.primary {
+		width: 40%;
+	}
+
+	.secondary,
+	.tertiary {
+		width: 30%;
+	}
+}

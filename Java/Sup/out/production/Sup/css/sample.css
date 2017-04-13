@@ -1,0 +1,22 @@
+/* There are some JavaFX items that have default classes, like root, text-field etc. */
+
+.root {
+-fx-font-family: Impact;
+-fx-alignment: center;
+-fx-hgap: 10;
+-fx-vgap: 10;
+}
+
+.title {
+-fx-font-size: 80px;
+-fx-fill: AQUA;
+}
+
+.text-field {
+    -fx-font-family: Helvetica;
+}
+
+#firstName {
+    -fx-background-color: yellow;
+    -fx-font-family: Georgia;
+}

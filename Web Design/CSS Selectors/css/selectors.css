@@ -1,0 +1,508 @@
+/* Base Styles */
+/* Base Styles -------------------- */
+
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Nunito', sans-serif;
+	color: #384047;
+	padding: 40px 0 60px;
+}
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px dotted rgba(0, 0, 0, 0.2);
+  margin: 50px 0;
+}
+h1 {
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+form {
+	margin-bottom: 60px;
+}
+
+nav a {
+	font-size: .9em;
+	background: #ff784f;
+	color: white;
+	display: inline-block;
+	text-decoration: none;
+	padding: 3px 8px;
+	border-radius: 3px;
+}
+nav a:hover {
+	opacity: .75;
+}
+
+
+
+/* Form Fields -------------------- */
+
+input,
+textarea  {
+  outline: 0;
+	border: none;
+	padding: 15px;
+	border-radius: .3em;
+	border-bottom: 3px solid rgba(0,0,0,0.05);
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+	font-size: 1em;
+  color: #222;
+  font-weight: 300;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.2em;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.08) inset;
+}
+
+input[type="checkbox"] + label {
+  font-weight: 300;
+	font-size: .85em;
+  display: inline;
+	padding-left: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+label:last-of-type {
+ margin-top: 1.1em;
+}
+
+.form-contact {
+  padding: 20px 24px;
+  background: #f4f7f8;
+}
+
+
+/* Media Queries -------------------- */
+
+@media (max-width: 768px) {
+	#container {
+		width: 92%;
+	}
+}
+
+@media (min-width: 769px) {
+  .inln {
+    width: auto;
+    display: inline-block;
+  }
+
+  /*Adjacent Sibling Selector*/
+  .btn + .btn {
+    margin-left: 20px;
+  }
+}
+
+
+/* Attribute Selectors ------------- */
+
+
+#container {
+  max-width: 75%;
+  margin: auto;
+}
+
+input[type="email"] {
+  background: #fdfee6;
+}
+
+/*input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+}*/
+
+
+#container a[target="_blank"] {
+  color: #39add1;
+  text-decoration: none;
+  border-bottom: 1px dotted;
+}
+
+/* DRY Classes ------------- */
+
+.br {
+  border-radius: .5em;
+}
+
+.avatar {
+  display: block;
+  margin: 0 auto 2em;
+}
+
+.rounded {
+  border-radius: 50%;
+}
+
+.btn {
+  cursor: pointer;
+  font-size: .875em;
+  font-weight: 400;
+  color: #fff;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  opacity: .75;
+}
+
+.default {
+  background-color: #52bab3;
+}
+
+.error {
+  background-color: #ff784f;
+}
+
+/* Combinators ------------- */
+
+/*Direct descendant */
+form > a {
+  font-size: .7em;
+}
+
+/*General Sibling */
+/*h1 ~ label {
+  background: tomato;
+  color: white;
+  padding: 5px;
+}*/
+
+/*Child Selectors---------------------*/
+#child-selectors-lesson ul {
+  list-style: none;
+  margin: auto;
+}
+
+#child-selectors-lesson li {
+  border-bottom: 1px dotted #40918c;
+  padding: 15px 10px;
+}
+
+#child-selectors-lesson {
+  max-width: 75%;
+  margin: auto;
+}
+
+#child-selectors-lesson li:first-child {
+  background: #52bab3;
+  color: white;
+}
+
+#child-selectors-lesson li:last-child {
+  border: none;
+}
+
+
+#child-selectors-lesson li:only-child {
+  color: tomato;
+  font-size: 1.5em;
+}
+
+#child-selectors-lesson :empty {
+  background-color: tomato;
+}
+
+/*Substring Selectors---------------------*/
+
+.gallery {
+  max-width: 610px;
+  margin: auto;
+  line-height: 1.5;
+  padding: 10px 0 80px;
+}
+
+.gallery ul {
+  list-style: none;
+  padding: 0;
+}
+
+.gallery li {
+  margin-bottom: 14px;
+}
+
+.gallery a {
+  color: #4183c4;
+}
+
+/*Begins With (denoted by carrot ^)*/
+.gallery a[href^="http"] {
+  color: #52bab3;
+  text-decoration: none;
+}
+
+/*Ends With (denoted by $) (added h2 + ul li later to make overly specific)*/
+h2 + ul li a[href$=".zip"] {
+  background-image: url('../img/icn-zip.svg')
+}
+
+h2 + ul li a[href$=".pdf"] {
+  background-image: url('../img/icn-pdf.svg')
+}
+
+h2 + ul li a[href$=".jpg"] {
+  background-image: url('../img/icn-picture.svg')
+}
+
+/*Contains Substring*/
+a[href*="downloads"] {
+	/*Following are styles for the little icons. Didn't need everything we used in "how to make a website" because these are not images, they are svg*/
+	background-repeat: no-repeat;
+	background-size: 18px 18px;
+	padding-left: 25px;
+}
+
+img[src*="thumbnails"] {
+	/*Following are styles for the little icons. Didn't need everything we used in "how to make a website" because these are not images, they are svg*/
+	margin: 4px;
+	border: solid 2px;
+	width: 180px;
+	height: 140px;
+}
+
+/*Dope Hover Animation (Chrome requires webkit prefix)*/
+img[src*="thumbnails"]:hover {
+	-webkit-clip-path: polygon(100% 50%,84.70057014808336% 54.5684167277018%,91.0518476172854% 60.99980941685713%,82.33578363789503% 63.39392013277814%,93.30127018922194% 75%,77.76736691019323% 71.30665001530522%,80.05203820042827% 80.05203820042827%,71.30665001530522% 77.76736691019323%,75% 93.30127018922192%,63.39392013277814% 82.33578363789503%,60.99980941685714% 91.0518476172854%,54.56841672770181% 84.70057014808336%,50% 100%,45.4315832722982% 84.70057014808336%,39.000190583142874% 91.0518476172854%,36.606079867221865% 82.33578363789505%,25.00000000000001% 93.30127018922194%,28.693349984694787% 77.76736691019323%,19.947961799571733% 80.05203820042827%,22.23263308980677% 71.30665001530522%,6.698729810778076% 75.00000000000001%,17.664216362104966% 63.39392013277815%,8.948152382714603% 60.99980941685715%,15.299429851916635% 54.568416727701816%,0% 50.00000000000001%,15.299429851916635% 45.431583272298205%,8.94815238271459% 39.00019058314288%,17.66421636210496% 36.60607986722188%,6.698729810778062% 25.000000000000014%,22.23263308980676% 28.693349984694787%,19.947961799571715% 19.947961799571747%,28.69334998469477% 22.232633089806775%,24.99999999999998% 6.698729810778083%,36.60607986722184% 17.664216362104973%,39.00019058314284% 8.948152382714603%,45.43158327229816% 15.299429851916642%,49.99999999999999% 0%,54.568416727701795% 15.299429851916635%,60.99980941685711% 8.94815238271459%,63.39392013277812% 17.66421636210496%,74.99999999999997% 6.6987298107780475%,71.3066500153052% 22.23263308980675%,80.05203820042826% 19.947961799571722%,77.76736691019323% 28.69334998469477%,93.30127018922192% 24.99999999999998%,82.33578363789502% 36.60607986722184%,91.0518476172854% 39.00019058314283%,84.70057014808336% 45.43158327229816%);
+}
+
+/*Cool Inline SVG tricks*/
+#svg-fun {
+	margin: 200px;
+}
+.svg-kiwi {
+	fill: pink;
+	stroke: #909;
+	stroke-width: .10em;
+}
+
+.svg-kiwi:hover {
+	fill: lime;
+}
+
+.svg-ground {
+	fill: black;
+}
+
+/* UI element states pseudo-classes-------------*/
+input:focus,
+textarea:focus {
+	border-color: #52bab3;
+}
+
+:disabled {
+	background: #ddd;
+}
+
+input[type="checkbox"]:checked + label {
+	font-weight: bold;
+}
+
+/*Advanced Selectors-------------*/
+#advanced-selectors1 {
+ max-width: 75%;
+ margin: auto;
+}
+
+#advanced-selectors1 ul {
+	list-style: none;
+	width: 50%;
+	margin: auto;
+}
+#advanced-selectors1 li {
+	border-bottom: 1px dotted;
+	padding: 15px 10px;
+}
+
+#advanced-selectors1 li:nth-child(even) {
+	background-color: #52bab3;
+	color: white;
+}
+
+#advanced-selectors1 li:nth-child(odd) {
+	background-color: tomato;
+	color: white;
+}
+
+/* Nth Child Expression Syntax */
+/* li:nth-child(an+b) {}  b is initial count, a is count after that     */
+
+#advanced-selectors1 li:nth-child(7n+3) {
+	background-color: green;
+	color: #FFF;
+}
+
+#advanced-selectors1 li:nth-child(7) {
+	background-color: yellow;
+	color: black;
+}
+
+/* Nth of Type*/
+
+
+#advanced-selectors2 section {
+	margin: 200px auto;
+	width: 50%;
+}
+
+#advanced-selectors2 div {
+	border-bottom: 1px dotted;
+	padding: 18px 10px;
+	color: #777;
+}
+
+#advanced-selectors2 div:nth-of-type(2n+3) {
+	background: #52bab3;
+	color: white;
+}
+
+/* Nth Last of Type */
+#advanced-selectors2 div:nth-last-of-type(1) {
+	background: red;
+	color: white;
+}
+
+
+/*Root and Target*/
+#container2 {
+	max-width: 1100px;
+	margin: auto;
+}
+
+#container2 .btn {
+	width: 100%;
+}
+
+.row {
+	padding-top: 40px;
+}
+.col {
+	float: left;
+	width: 32.421%;
+	padding: 15px;
+}
+
+/*Gets topmost element in a document*/
+:root {
+	background: #e3effb;
+}
+
+/*Selects element when the element is the target of a link*/
+:target {
+	background: #384047;
+	color: #fff;
+}
+
+#col-c:target {
+	background: #eff1f2;
+	color: initial;
+	box-shadow: 0 0 6px rgba(0,0,0,.2);
+}
+
+/* Not Selector */
+
+/*div:not(#col-a) {
+	border: solid 1px red;
+}*/
+
+#container2 input:not([type="submit"]) {
+	box-shadow: inset 0 2px 0 rgba(0,0,0, .15);
+}
+
+.col:not(:first-child),
+nav a:not(:first-child) {
+	margin-left: 15px;
+}
+/* Float Clearfix ------------------ */
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* First Line and First Letter Pseudo-Elements */
+.intro:first-line {
+	font-weight: bold;
+	font-size: 1.4em;
+}
+
+.intro:first-letter {
+	float:left;
+	font-size: 80px;
+	color: #fff;
+	padding: 5px 10px;
+	background: #384047;
+	margin: 10px 10px 0 0;
+	border-radius: 5px;
+	line-height: 1;
+}
+
+/* Before and After */
+
+/* \ is a unicode escape */
+.jpg::before {
+	content: "\1F608  ";
+	font-size: 2em;
+}
+
+.zip::before {
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: coral;
+	margin: 0 10px;
+}
+
+/* Attr() */
+.d-loads a::after {
+	content: attr(title);
+	display: inline-block;
+	color: initial;
+	font-size: .65em;
+	margin-left: 5px;
+}
+
+/* Progress Bar Quiz */
+
+.progbar::after {
+	content: "";
+  display: block;
+  width: 50%;
+  height: 100%;
+  border-radius: inherit;
+	background-color: #5ece7f;
+}
+
+.progbar::before {
+	content: "";
+	display: block;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	position: absolute;
+	left: 49%;
+	top: -9px;
+	background-color: #7dd898;
+}
+
+.progbar {
+  height: 6px;
+  border-radius: 3px;
+  background: #d6d7d9;
+  position: relative;
+  margin-bottom: 3.875em;
+}

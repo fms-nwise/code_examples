@@ -1,0 +1,21 @@
+{{#partial "content"}}
+    <h1>Current Ideas</h1>
+
+    <ul>
+        {{#each ideas}} <!--Handlebars for each loop helper. Title was known by getTitle()-->
+            <li>
+                <form action="/ideas/{{slug}}/vote" method="post">
+                    <a href="/ideas/{{slug}}">{{title}}</a> ( {{voteCount}} votes) <button>Vote</button>
+                </form>
+            </li>
+        {{/each}}
+    </ul>
+
+    <form action="/ideas" method="post">
+        <input type="text" placeholder="What's your idea?" name="title">
+        <button>Suggest!</button>
+    </form>
+{{/partial}}
+
+
+{{>base.hbs}}

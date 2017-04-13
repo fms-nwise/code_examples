@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="container" prefHeight="600" prefWidth="800" stylesheets="/css/main.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.wiseworks.hangman.controllers.Home">
+  <children>
+    <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+        <Text id="title" fill="#990000" strokeType="OUTSIDE" strokeWidth="0.0" text="Hangman" textAlignment="CENTER">
+          <font>
+            <Font size="90.0" />
+          </font>
+          <HBox.margin>
+            <Insets />
+          </HBox.margin>
+        </Text>
+      </children>
+    </HBox>
+    <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+        <Button fx:id="new_game" mnemonicParsing="false" onMouseClicked="#start_newgame" text="New Game" textAlignment="CENTER">
+          <font>
+            <Font size="20.0" />
+          </font>
+        </Button>
+      </children>
+    </HBox>
+  </children>
+</VBox>

@@ -1,0 +1,206 @@
+/***********************************************
+GENERAL
+************************************************/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#wrapper {
+  max-width: 940px;
+  margin: 0 auto; /*Auto centers relative objects in wrapper*/
+  padding: 0 5%; /*0 is top and bottom, 5% left and right */
+}
+
+a {
+  text-decoration: none; /*removes underlines on links*/
+}
+
+img {
+  max-width: 100%; /*Keeps images inside their containers*/
+}
+
+h3 {
+  margin: 0 0 1em 0;
+}
+
+/***********************************************
+HEADING
+************************************************/
+
+header {
+  float: left;
+  margin: 0 0 30px 0; /*Top,Right,Bottom,Left*/
+  padding: 5px 0 0 0;
+  width: 100%; /*It lost width when it got floated, putting it back*/
+}
+
+#logo {
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Changa One', sans-serif; /*Use single quotes and exact name of font*/
+  margin: 15px 0; /*TopBottom,LeftRight*/
+  font-size: 1.75em; /*EMs are a relative unit of measurement. 1em is current font size*/
+  font-weight: normal; /*As in boldness*/
+  line-height: 0.8em; /*Determines amount of space between each line of text*/
+}
+
+h2 {
+  font-size: 0.75em;
+  margin: -5px 0 0; /*Top,LeftRight,Bottom*/
+  font-weight: normal;
+}
+
+/***********************************************
+NAVIGATION
+************************************************/
+
+nav {
+  text-align: center;
+  padding: 10px 0; /*TopBottom,LeftRight*/
+  margin: 20px 0 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0 10px; /*TopBottom,LeftRight*/
+  padding: 0;
+}
+
+nav li {
+  display:inline-block; /*Things can line up side by side. Horizontal menu. Still has block features height and width.*/
+}
+
+nav a {
+  font-weight: 800;
+  padding: 15px 10px; /*Makes easier to click links. Room between buttons.*/
+}
+
+/***********************************************
+FOOTER
+************************************************/
+
+footer {
+  font-size: 0.75em;
+  text-align: center;
+  clear: both; /*Keeps floaters away. Stays on it's own line.*/
+  padding-top: 50px;
+  color: #ccc;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+}
+
+/***********************************************
+PAGE: PORTFOLIO
+************************************************/
+
+#gallery {
+  margin: 0;
+  padding: 0;
+  list-style: none; /*No Bullets*/
+}
+
+/*Put the gallery into two columns with float and width*/
+#gallery li {
+  float: left; /*Elements go side by side rather than stack starting from left*/
+  width: 45%; /*List items can only be 45% the width of parent element, causing two columns*/
+  margin: 2.5%; /*Puts some space between images. Margin X 4 = 10% MATHS!*/
+  background-color: #f5f5f5; /*nice light gray background for li box*/
+  color: #bdc3c7; /*Won't get noticed unless caption is not a link*/
+}
+
+/*Styling Captions*/
+#gallery li a p {
+  margin: 0;
+  padding: 5%;
+  font-size: 0.75em;
+  color: #bdc3c7;
+}
+
+/***********************************************
+PAGE: ABOUT
+************************************************/
+
+.profile-photo {
+  display: block; /*Allows us to use auto margins to center element on page*/
+  max-width: 150px;
+  margin: 0 auto 30px; /*Top,LeftRight,Bottom*/
+  border-radius: 100%; /*Makes Circle*/
+}
+
+/***********************************************
+PAGE: CONTACT
+************************************************/
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9em;
+}
+
+/*This makes the icon images move to the proper spot*/
+.contact-info a {
+  display: block; /*images will take up space*/
+  min-height: 20px; /*images about 20px tall so we need to set this so we can see whole image*/
+  background-repeat: no-repeat;
+  background-size: 20px 20px; /*Images are double size need to be, this resizes them*/
+  padding: 0 0 0 30px; /*30px padding left? Paradoxically pushes the text right of the images*/
+  margin: 0 0 10px; /*Just gives our links some vertical seperation*/
+}
+
+.contact-info li.phone a {
+  background-image: url('../img/phone.png');
+}
+
+.contact-info li.mail a {
+  background-image: url('../img/mail.png');
+}
+
+.contact-info li.twitter a {
+  background-image: url('../img/twitter.png');
+}
+
+
+/***********************************************
+COLORS
+************************************************/
+
+body {
+  background-color: #fff;
+  color: #999;
+}
+
+
+header {
+  background: #6ab47b;
+  border-color: #599a68;
+}
+
+nav {
+  background: #599a68;
+}
+
+/*The comma is seperating selectors, we are selecting h1 and h2 */
+h1, h2 {
+  color: #fff;
+}
+
+a {
+  color: #6ab47b;
+}
+
+nav a, nav a:visited {
+  color: #fff;
+}
+
+/* .class on the a tag means a tags with this class applied get this style */
+nav a.selected, nav a:hover {
+  color: #32673f;
+}

@@ -1,0 +1,69 @@
+/* =================================
+  Button Transitions
+==================================== */
+
+
+.button {
+	color: #4a89ca;
+	background: #fff;
+	margin:auto;
+	border: 2px solid;
+	/*Duration is a required property for CSS Transitions. Number followed by time unit*/
+	/*Additional durations apply to additional properties in order. If 2 durations and 3 properties the last property defaults to first duration.*/
+	/*Property specifies what properties to transition. Default = all*/
+	transition: background 400ms ease-out 0ms, border-radius 800ms, box-shadow .5s ease-out 0s, color 200ms;
+}
+
+.button:hover {
+	color: #fff;
+	background: #4a89ca;
+}
+
+.button:active {
+	background: #a33830;
+}
+
+/* =================================
+  Photo Overlay Transitions
+==================================== */
+.photo-overlay {
+	opacity: 0;
+	transition: opacity .5s
+}
+
+.photo-overlay:hover {
+	opacity: 1;
+}
+
+.photo-overlay .button {
+	background: none;
+	margin: 0;
+	transition-property: background;
+	transition-duration: 400ms;
+	transition-delay: 200ms;
+}
+
+.photo-overlay:hover .button {
+	color: #fff;
+	background: rgba(74, 137, 202, .75);
+	transition-property: background, box-shadow;
+	transition-duration: 400ms;
+}
+
+.photo-overlay:hover .button:hover {
+	background: rgba(74, 137, 202, 1);
+	box-shadow: 0 0 0 3px rgba(255, 255, 255, .7);
+}
+
+
+.btn-icon {
+	transition-property: opacity, left;
+	transition-duration: .5s;
+	transition-delay: .3s;
+	transition-timing-function: ease-out;
+}
+
+.button:hover .btn-icon {
+	opacity: 1;
+	left: 80%;
+}

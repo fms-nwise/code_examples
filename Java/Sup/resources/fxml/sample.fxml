@@ -1,0 +1,40 @@
+
+<!-- Below are "Processing Instructions". They can execute Java code -->
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+
+<!-- GridPane below is a tag -->
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+<GridPane fx:controller="sample.Controller"
+          stylesheets="/css/sample.css"
+          xmlns:fx="http://javafx.com/fxml">
+    <!-- GridPane.rowIndex is how we change the grid cell location of an object in FXML
+    columnSpan allows you to go across more than one column-->
+    <Text text="Sup"
+          styleClass="title"
+          GridPane.rowIndex="0"
+          GridPane.columnSpan="2"
+          GridPane.halignment="CENTER"/>
+
+    <Label text="First Name:"
+           GridPane.rowIndex="1"
+           GridPane.columnIndex="0"/>
+
+    <TextField fx:id="firstName"
+            GridPane.columnIndex="1"
+            GridPane.rowIndex="1"/>
+
+    <!-- the hashtagged keyword refers to methods in controller -->
+
+    <Button text="Say Sup!"
+            onAction="#handleSaySup"
+            GridPane.rowIndex="2"
+            GridPane.columnIndex="1"
+            GridPane.halignment="RIGHT"/>
+
+</GridPane>

@@ -1,0 +1,71 @@
+/* --------------------------
+  BASE
+--------------------------- */
+
+body {
+  padding-top: 5em;
+}
+
+svg {
+  width: 33.32%;
+  float: left;
+}
+
+.gear-bg,
+.hammer-bg,
+.heart-bg {
+  transition: .3s ease-out;
+}
+
+.gear-icon,
+.hammer-icon,
+.heart-icon {
+  transition: transform .2s ease-out;
+  /*Firefox only takes pixels for transform-origin. Look at cx and cy in xml to get these values*/
+  transform-origin: 200px 50px;
+}
+/* --------------------------
+  GEAR
+--------------------------- */
+.gear:hover .gear-icon {
+  transform: rotate(45deg) scale(1.3);
+}
+
+.gear-bg {
+  stroke: #39ADD1;
+}
+.gear:hover .gear-bg {
+  fill: #3881cc;
+  stroke-width: 8;
+}
+
+/* --------------------------
+  HAMMER
+--------------------------- */
+.hammer:hover .hammer-icon {
+  transform: rotate(45deg);
+}
+
+.hammer-bg {
+  stroke: #fee16e;
+}
+
+.hammer:hover .hammer-bg {
+  fill: #feae6e;
+  stroke-width: 8;
+}
+
+/* --------------------------
+  HEART
+--------------------------- */
+.heart:hover .heart-icon {
+  transform: scale(1.3);
+}
+
+.heart-bg {
+  stroke: #FF8EB4;
+}
+.heart:hover .heart-bg {
+  fill: #ff5e5e;
+  stroke-width: 8;
+}

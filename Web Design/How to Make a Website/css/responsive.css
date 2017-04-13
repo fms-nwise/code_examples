@@ -1,0 +1,89 @@
+/*Target digital screens of minimum width 480px.
+In other words: larger than 480px, this happens.
+We already designed for the smallest screen with main.css so we only need to worry about larger sizes.
+480px is a common size for smartphones in landscape mode*/
+@media screen and (min-width: 480px) {
+
+  /***********************************************
+  TWO COLUMN LAYOUT
+  ************************************************/
+
+  #primary {
+    width: 50%;
+    float: left;
+  }
+
+  #secondary {
+    width: 40%;
+    float: right;
+  }
+
+  /***********************************************
+  3 * 5 = 15 (margin area of images in 3 cols)
+  100% - 15% = 85%
+  85 / 3 = 28.3333 (% each col should take)
+  ************************************************/
+
+  /***********************************************
+  PAGE: PORTFOLIO
+  ************************************************/
+
+  #gallery li {
+    width: 28.3333%;
+  }
+
+  /*Clear every 4th item so we don't get positioning errors*/
+  #gallery li:nth-child(4n) {
+    clear:left; /*Just clear items to the left of this one*/
+  }
+
+  /***********************************************
+  PAGE: ABOUT
+  ************************************************/
+  .profile-photo {
+    float: left; /*Turns this guy inline requires us to adjust margin that had auto in it*/
+    margin: 0 5% 80px 0;
+  }
+
+}
+
+/*660px Size is for iPads/Phablets, having it after the smaller size lets us use cascading*/
+@media screen and (min-width: 660px) {
+
+  /***********************************************
+  PAGE: HEADER
+  ************************************************/
+
+  /*Moving navigation from centered to the right side of screen*/
+  nav {
+    background: none;
+    float: right;
+    font-size: 1.125em
+    margin-right: 5%;
+    text-align: right;
+    width: 45%;
+  }
+
+  /*Logo is now pulling to the left side of the screen*/
+  #logo {
+    float: left;
+    margin-left: 5%;
+    text-align: left;
+    width: 45%;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  h2 {
+    font-size: 0.825em;
+    margin-bottom: 20px;
+  }
+
+  header {
+    border-bottom: 5px solid #599a68; /*Border width, type, color*/
+    margin-bottom: 60px;
+  }
+
+}

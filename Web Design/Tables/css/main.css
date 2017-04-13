@@ -1,0 +1,75 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #384047;
+}
+
+table {
+  max-width: 960px;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+caption {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: rgba(255, 0, 0, 0.75);
+  color: #FFF;
+  font-size: 1.6em;
+  font-weight: 400;
+  padding: 10px 0;
+}
+
+thead th {
+  font-weight: 400;
+  background: #8a97a0;
+  color: #FFF;
+}
+
+th[scope] {
+  font-weight: bold;
+}
+
+tr {
+  background: #f4f7f8;
+  border-bottom: 1px solid #FFF;
+  margin-bottom: 5px;
+}
+
+/*tr:first-child {
+  background: rgba(255, 0, 0, 0.75);
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+}*/
+
+tr:nth-child(2n+2) {
+  background: #e8eeef;
+}
+
+th, td {
+  text-align: left;
+  padding: 20px;
+  font-weight: 300;
+}
+
+
+tfoot tr {
+  background: #8a97a0;
+}
+
+tfoot td {
+  padding: 10px 2px;
+  font-size: 0.8em;
+  font-style: italic;
+  color: #fff;
+  padding-left: 1.5em;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}

@@ -1,0 +1,112 @@
+/* --------------------------
+  Base
+--------------------------- */
+
+body {
+  background: #8069a1;
+  padding-top: 60px;
+}
+
+svg {
+	margin: auto;
+  display: block;
+}
+
+/* --------------------------
+  Keyframes
+--------------------------- */
+
+@keyframes grow {
+  0% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes turn {
+    0% {
+      transform: rotate(0) scale(0);
+      opacity: 0;
+    }
+    60% {
+      transform: rotate(375deg) scale(1.1);
+    }
+    80% {
+      transform: rotate(355deg) scale(0.9);
+    }
+    100% {
+      transform: rotate(360deg) scale(1);
+    }
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.4);
+  }
+}
+
+/* --------------------------
+  SVG Styles
+--------------------------- */
+.badge * {
+  transform-origin: 180px 180px;
+}
+.point1 {
+  transform-origin: 180px 107.8px;
+}
+.point2 {
+  transform-origin: 223.7px 244.2px;
+}
+.point3 {
+  transform-origin: 135.5px 244.2px;
+}
+.point4 {
+  transform-origin: 108.3px 160.4px;
+}
+.point5 {
+  transform-origin: 251.7px 160.4px;
+}
+.outer,
+.inner,
+.inline {
+  /*Grow is a function defined in the @keyframes statement. Backwards will immediately apply the first animation keyframe with the page loads.*/
+  animation: grow 1s ease-out backwards;
+}
+
+.inner {
+  animation-delay: .1s;
+}
+
+.inline {
+  animation-delay: .15s;
+}
+
+.star {
+  animation: turn 1.1s .2s ease-out backwards;
+}
+
+/*Animation name, animation time, delay time*/
+.star circle {
+  animation: pulse 0.7s 1.5s;
+}
+
+.star circle:nth-of-type(2) {
+  animation-delay: 1.6s;
+}
+
+.star circle:nth-of-type(3) {
+  animation-delay: 1.7s;
+}
+
+.star circle:nth-of-type(4) {
+  animation-delay: 1.8s;
+}
+
+.star circle:nth-of-type(5) {
+  animation-delay: 1.9s;
+}

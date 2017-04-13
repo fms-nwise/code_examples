@@ -1,0 +1,15 @@
+<h2>{{entry.title}}</h2>
+<figure>
+    <img src="{{entry.photo}}">
+    <figcaption>{{entry.description}}</figcaption>
+</figure>
+<div class="actions">
+    <button type="button" (click)="isLiked = !isLiked" [ngClass]="{liked: isLiked}">❤</button>
+    <button type="button" (click)="showComments = !showComments">Comments ({{entry.comments.length}})</button>
+</div>
+<div class="comments" *ngIf="showComments"> <!--ngIf says if show comments is set to true, show this stuff. Asterisk same meaning -->
+    <div class="comment" *ngFor="let comment of entry.comments"> <!-- //ngFor code short for iterate over collection. Like each. Asterisk declares current element as base.-->
+        <p><strong>{{comment.name}}</strong> {{comment.comment}}</p>
+    </div>
+    <app-entry-comment-form (onCommentAdded)="onCommentAdded($event)" [entryId]="entry.id"></app-entry-comment-form>
+</div>

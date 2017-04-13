@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Information</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+
+<!--Table tag's attributes are deprecated/tr = table row/td = table data (the cell) -->
+<table>
+  <caption>Employee Information</caption>
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Job Role</th>
+      </tr>
+    </thead>
+    <!--Yes Table Footer comes after head and before body because fuck logic. -->
+    <tfoot>
+      <tr>
+        <td colspan="3">Data is updated every 15 minutes.</td>
+      </tr>
+    </tfoot>
+
+    <tbody>
+      <tr>
+        <th scope="row">Nick Pettit</th>
+        <td>nick@example.com</td>
+        <td>Web Designer</td>
+      </tr>
+      <tr>
+        <th scope="row">Joshua Haynes</th>
+        <td>josh@example.com</td>
+        <td>Gamer</td>
+      </tr>
+      <tr>
+        <th scope="row">Nathan Wise</th>
+        <td>nathan@example.com</td>
+        <td>Developer</td>
+      </tr>
+      <tr>
+        <th scope="row">Donald Trump</th>
+        <td>trump@sucks.com</td>
+        <td>Asshole</td>
+      </tr>
+    </tbody>
+</table>
+
+  </body>
+</html>

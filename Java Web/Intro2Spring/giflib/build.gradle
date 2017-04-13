@@ -1,0 +1,30 @@
+group 'com.teamtreehouse'
+version '1.0-SNAPSHOT'
+
+buildscript{
+    repositories{
+        mavenCentral()
+    }
+    dependencies{
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.2.6.RELEASE'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+sourceCompatibility = 1.5
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //Shorthand compile statement below
+    //compile 'org.springframework:spring-mvc:4.3.2.RELEASE'
+
+    // https://mvnrepository.com/artifact/org.springframework/spring-webmvc
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.2.6.RELEASE'
+
+}
+
