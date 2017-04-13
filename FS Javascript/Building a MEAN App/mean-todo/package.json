@@ -1,0 +1,21 @@
+{
+  "name": "mean-todo",
+  "version": "1.0.0",
+  "description": "To do list with MEAN",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.4"
+  },
+  "devDependencies": {
+    "webpack": "^2.3.3"
+  }
+}
