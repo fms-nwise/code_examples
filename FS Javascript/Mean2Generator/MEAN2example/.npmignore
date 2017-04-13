@@ -1,0 +1,6 @@
+/node_modules
+*.css
+[!gulpfile]*.js
+*.map
+**/typings
+/.tmp

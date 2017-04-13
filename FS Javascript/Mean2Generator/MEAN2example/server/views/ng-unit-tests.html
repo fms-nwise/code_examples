@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>Angular Unit Tests</title>
+	<link rel="stylesheet" href="/lib/jasmine-core/lib/jasmine-core/jasmine.css">
+	<script src="/lib/jasmine-core/lib/jasmine-core/jasmine.js"></script>
+	<script src="/lib/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
+	<script src="/lib/jasmine-core/lib/jasmine-core/boot.js"></script>
+</head>
+<body>
+
+	<!-- #1. add the system.js library -->
+	<script src="/lib/systemjs/dist/system.src.js"></script>
+	<script src="/lib/angular2/bundles/angular2.dev.js"></script>
+	<script>
+		// #2. Configure SystemJS to use the .js extension
+		//     for imports from the app folder
+		System.config({
+			packages: {
+				'app': {defaultExtension: 'js'}
+			}
+		});
+		// #3. Import All of the tests
+		Promise.all([
+			{% for angularTest in angularTests %}
+				System.import('{{ angularTest }}'),
+			{% endfor %}
+		])
+		.then(window.onload)
+		.catch(console.error.bind(console));
+	</script>
+	
+</body>
+</html>

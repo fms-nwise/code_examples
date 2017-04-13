@@ -1,0 +1,47 @@
+{
+  "name": "MEAN2example",
+  "version": "0.1.0",
+  "description": "MEAN stack using typescript and Angular 2",
+  "main": "/server/server.js",
+  "scripts": {
+    "postinstall": "gulp typings",
+    "compile": "gulp build",
+    "start": "gulp start"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "angular2": "2.0.0-beta.8",
+    "bootstrap-sass": "^3.3.6",
+    "consolidate": "^0.14.0",
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.33.3",
+    "express": "^4.13.4",
+    "glob": "^7.0.0",
+    "mongoose": "^4.4.6",
+    "morgan": "^1.7.0",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.2",
+    "swig": "^1.4.2",
+    "systemjs": "0.19.22",
+    "zone.js": "0.5.15"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat-css": "^2.2.0",
+    "gulp-mocha": "^2.2.0",
+    "gulp-nodemon": "^2.0.6",
+    "gulp-sass": "^2.2.0",
+    "gulp-sass-lint": "^1.1.1",
+    "gulp-spawn": "^0.3.0",
+    "gulp-tslint": "^4.3.3",
+    "gulp-typings": "^1.1.0",
+    "jasmine-core": "2.4.1",
+    "should": "^8.2.2",
+    "tslint": "^3.5.0",
+    "typescript": "^1.8.2",
+    "typings": "^0.6.8"
+  },
+  "keywords": ""
+}
