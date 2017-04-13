@@ -4,8 +4,9 @@ let xhr = new XMLHttpRequest();
 //2. Create a callback function
 //onreadystatechange is event for any change in the ajax request object
 xhr.onreadystatechange = function () {
-      //This readyState is the final state. The object request is done. 
-    if (xhr.readyState === 4) {
+      //This readyState is the final state. The object request is done.
+      //readyState tracks progress as 0-4 
+    if (xhr.readyState === 4 && xhr.status === 200) {
         //sets xhr response text into div
         document.getElementById('ajax').innerHTML = xhr.responseText;
     }
