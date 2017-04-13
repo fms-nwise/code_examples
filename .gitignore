@@ -1,3 +1,4 @@
 node_modules/
 .idea/
 .gradle/
+bower_components/
