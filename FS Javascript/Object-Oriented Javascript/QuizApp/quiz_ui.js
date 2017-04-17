@@ -4,13 +4,15 @@ var QuizUI = {
             this.displayScore();
         } else {
             this.displayQuestion();
-            this.displayChoices();
+            this.displayChoices;
             this.displayProgress();
         }
     },
     displayQuestion: function() {
+        var theQuestion = quiz.getCurrentQuestion().text;
         var choices = quiz.getCurrentQuestion().choices;
 
+        this.populateIdWithHTML("question", theQuestion);
         for(var i = 0; i < choices.length; i++) {
             this.populateIdWithHTML("choice" + i, choices[i]);
             this.guessHandler("guess" + i, choices[i]);
