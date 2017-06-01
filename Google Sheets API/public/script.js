@@ -70,6 +70,13 @@ $(function() {
       showMessage('Sync complete.');
     });
   });
+  $('button[rel="get"]').click(function() {
+    var url = '/spreadsheets/get';
+    makeRequest('GET', url, function(err) {
+      if (err) return showError(err);
+      showMessage('Got Sheet Data.');
+    });
+  });
 });
 
 function makeRequest(method, url, callback) {

@@ -125,6 +125,21 @@ router.post('/spreadsheets/:id/sync', function(req, res, next) {
   });
 });
 
+router.get('/spreadsheets/get', function(req, res, next) {
+  var auth = req.get("Authorization");
+   if (!auth) {
+    return next(Error('Authorization required.'));
+  }
+  var accessToken = auth.split(' ')[1];
+  var helper = new SheetsHelper(accessToken);
+  helper.get(function(err, response) {
+    if (err) {
+      return next(err);
+    }
+    return res.json();
+  });
+});
+
 
 
 // TODO: Add route for syncing spreadsheet.

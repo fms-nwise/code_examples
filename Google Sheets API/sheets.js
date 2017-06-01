@@ -107,6 +107,21 @@ function buildHeaderRowRequest(sheetId) {
   };
 };
 
+SheetsHelper.prototype.get = function(callback) {
+  var request = { 
+    spreadsheetId: '12MIuCQWOf3Z3scannFEI_pDEQknyifPQ0zNb0I_83ok', 
+    range: 'A:T', valueRenderOption: 'FORMATTED_VALUE', 
+    dateTimeRenderOption: 'FORMATTED_STRING'
+  };
+  this.service.spreadsheets.values.get(request, function(err, response) {
+    if (err) {
+      return callback(err);
+    }
+    console.log(JSON.stringify(response, null, 2));
+    return callback();
+  });
+}
+
 SheetsHelper.prototype.sync = function(spreadsheetId, sheetId, orders, callback) {
   var requests = [];
   // Resize the sheet.
