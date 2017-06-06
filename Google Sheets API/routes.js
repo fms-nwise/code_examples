@@ -136,7 +136,9 @@ router.get('/spreadsheets/get', function(req, res, next) {
     if (err) {
       return next(err);
     }
-    return res.json();
+    var data = response;
+    console.dir(JSON.parse(data));
+    return res.status(200).json({data: data});
   });
 });
 
