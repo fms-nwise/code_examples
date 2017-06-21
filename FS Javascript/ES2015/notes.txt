@@ -1,0 +1,2 @@
+'use strict'; makes javascript throw warnings at runtime if there are any errors in syntax
+
