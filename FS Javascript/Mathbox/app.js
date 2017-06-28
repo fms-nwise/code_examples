@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 //This is getting session passed in as an argument so it can access it
 const MongoStore = require('connect-mongo')(session);
+const expresshandlebars = require('express-handlebars');
 const app = express();
 
 
