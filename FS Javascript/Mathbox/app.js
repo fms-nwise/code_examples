@@ -1,9 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
-const session = require('express-session');
+// const mongoose = require('mongoose');
+// const session = require('express-session');
 //This is getting session passed in as an argument so it can access it
-const MongoStore = require('connect-mongo')(session);
+// const MongoStore = require('connect-mongo')(session);
 const expresshandlebars = require('express-handlebars');
 const app = express();
 
@@ -11,25 +11,25 @@ const app = express();
 //app.use syntax is for middleware. middleware typically takes three arguments, req, res and next. Next being the next middleware to run.
 
 //mongodb connection
-mongoose.connect("mongodb://localhost:27017/maths");
-const db = mongoose.connection;
+// mongoose.connect("mongodb://localhost:27017/maths");
+// const db = mongoose.connection;
 
 //mongo error handler
-db.on('error', console.error.bind(console, 'connection error:'));
+// db.on('error', console.error.bind(console, 'connection error:'));
 
 // use sessions for tracking logins
-app.use(session({
-  secret: 'flimFlamFlimJam',
-  resave: true,
-  saveUninitialized: false,
-  store: new MongoStore({
-    mongooseConnection: db
-  })
-}));
+// app.use(session({
+//   secret: 'flimFlamFlimJam',
+//   resave: true,
+//   saveUninitialized: false,
+//   store: new MongoStore({
+//     mongooseConnection: db
+//   })
+// }));
 
 // make current user global available in templates
 app.use(function (req, res, next) {
-  res.locals.currentUser = req.session.userId;
+  // res.locals.currentUser = req.session.userId;
   next();
 })
 
